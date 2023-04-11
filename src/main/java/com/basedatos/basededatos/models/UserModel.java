@@ -9,10 +9,10 @@ public class UserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "email")
-    private String lastName;
+    private String email;
 
     @Column(name = "name")
-    private String firstName;
+    private String name;
     @Column(name = "password")
     private String password;
 
@@ -24,20 +24,20 @@ public class UserModel {
         this.id = id;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
