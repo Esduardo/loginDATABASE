@@ -2,18 +2,19 @@ package com.basedatos.basededatos.models;
 
 import jakarta.persistence.*;
 @Entity
-@Table(schema = "user")
+@Table(schema = "registro")
 public class UserModel {
     @Id
     @Column(name = "id",updatable = false, nullable = false,  unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "last_name")
+    @Column(name = "email")
     private String lastName;
 
-    @Column(name = "first_name")
+    @Column(name = "name")
     private String firstName;
-
+    @Column(name = "password")
+    private String password;
 
     public long getId() {
         return id;
@@ -38,5 +39,12 @@ public class UserModel {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
